@@ -65,7 +65,7 @@ class SRI extends DataObject implements PermissionProvider
      * @param array $context
      * @return bool
      */
-    public function canCreate($member = null, $context = array())
+    public function canCreate($member = null, $context = array()): bool
     {
         return false;
     }
@@ -75,7 +75,7 @@ class SRI extends DataObject implements PermissionProvider
      * @param null|Member $member
      * @return bool
      */
-    public function canEdit($member = null)
+    public function canEdit($member = null): bool
     {
         return false;
     }
@@ -138,7 +138,7 @@ class SRI extends DataObject implements PermissionProvider
      *   'VIEW_SITE' => 'View the site',
      * );
      */
-    public function providePermissions()
+    public function providePermissions(): array
     {
         return [
             'DELETE_SRI' => [
